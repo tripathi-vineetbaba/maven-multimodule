@@ -4,14 +4,14 @@
   <groupId>com.vineett</groupId>
   <artifactId>parent-project</artifactId>
   <packaging>pom</packaging>
-  <version>1.0</version>
+  <version>1.2-SNAPSHOT</version>
   <name>parent-project</name>
   <url>http://maven.apache.org</url>
   <scm>
-    <connection>scm:git:file:///F:/Gradle/MavenProject/.git</connection>
-    <developerConnection>scm:git:file:///F:/Gradle/MavenProject/.git</developerConnection>
-    <url>http://maven.apache.org</url>
-    <tag>parent-project-1.0</tag>
+    <connection>scm:git:git@github.com:tripathi-vineetbaba/maven-multimodule.git</connection>
+    <developerConnection>scm:git:git@github.com:tripathi-vineetbaba/maven-multimodule.git</developerConnection>
+    <url>https://github.com/tripathi-vineetbaba/maven-multimodule</url>
+    <tag>HEAD</tag>
   </scm>
   <dependencies>
     <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-exec -->
@@ -43,7 +43,7 @@
         <version>3.0.0-M1</version>
         <configuration>
           <!-- Correct syntax: repo-id::layout::url -->
-          <altDeploymentRepository>local-repo::file:///F:/Gradle/MavenProject/DeploymentDir</altDeploymentRepository>
+          <altDeploymentRepository>local-repo::file://${project.basedir}/../DeploymentDir</altDeploymentRepository>
         </configuration>
       </plugin>
     </plugins>
