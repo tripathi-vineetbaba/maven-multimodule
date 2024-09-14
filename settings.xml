@@ -1,0 +1,44 @@
+<settings>
+    <localRepository>F:\Gradle\MavenProject\mavenRepo</localRepository>
+    
+    <profiles>
+    <profile>
+        <id>dev</id>
+        <activation>
+            <activeByDefault>true</activeByDefault> <!-- This profile is active by default -->
+        </activation>
+        <properties>
+            <env>development</env>
+        </properties>
+        <build>
+            <resources>
+                <resource>
+                    <directory>src/main/java/com/vineett</directory>
+                </resource>
+            </resources>
+        </build>
+    </profile>
+
+    <profile>
+        <id>prod</id>
+        <activation>
+            <property>
+                <name>env</name>
+                <value>production</value>
+            </property>
+        </activation>
+        <properties>
+            <env>production</env>
+        </properties>
+        <build>
+            <resources>
+                <resource>
+                    <directory>src/main/java/com/vineett</directory>
+                </resource>
+            </resources>
+        </build>
+    </profile>
+</profiles>
+
+
+</settings>
