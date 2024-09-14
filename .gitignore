@@ -1,0 +1,7 @@
+*target*
+*dump*
+*localRepo*
+*DeploymentDir*
+*/.idea
+.idea
+.gitignore
