@@ -4,7 +4,7 @@
   <parent>
     <groupId>com.vineett</groupId>
     <artifactId>parent-project</artifactId>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
   <groupId>com.vineett</groupId>
@@ -20,4 +20,17 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>3.0.0-M1</version>
+        <configuration>
+          <!-- Correct syntax: repo-id::layout::url -->
+          <altDeploymentRepository>local-repo::file://${project.basedir}/../../DeploymentDir</altDeploymentRepository>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
